@@ -32,5 +32,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   lessons:
     +materialized: table
+    +persist_docs:        # In bigquery UI , when you open this table in schema in description , you will see the description of columns which you have provided.its quite useful.
+      relation: true
+      columns: true
     # Config indicated by + and applies to all files under models/example/
 
